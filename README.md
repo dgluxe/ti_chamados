@@ -26,12 +26,10 @@ Os dados são persistidos no PostgreSQL, ou seja, permanecem salvos mesmo após 
 - Docker instalado e em execução  
 
 Verificar se o .NET está instalado:
-
 ```
 dotnet --info
 ```
 Verificar se o Docker está instalado:
-
 ```
 docker --version
 ```
@@ -40,7 +38,7 @@ Testar se o Docker está funcionando:
 ```
 sudo docker run hello-world
 ```
-Subindo o PostgreSQL com Docker
+## Subindo o PostgreSQL com Docker
 Crie e inicie o container do PostgreSQL com o comando abaixo:
 
 ```
@@ -97,7 +95,7 @@ Sair do PostgreSQL:
 ```
 \q
 ```
-Rodando o projeto
+## Rodando o projeto
 Entre na pasta do projeto (onde está o arquivo .csproj) e execute:
 
 ```
@@ -113,7 +111,7 @@ Host=localhost;Port=5432;Username=postgres;Password=1234;Database=chamadosdb
 ```
 Isso funciona porque o PostgreSQL foi exposto na porta 5432 da sua máquina.
 
-Visualizando os dados (opcional)
+## Visualizando os dados (opcional)
 Você pode visualizar os dados do banco de três formas:
 
 Pelo próprio sistema no terminal
@@ -122,7 +120,7 @@ Pelo terminal do PostgreSQL (psql)
 
 Por ferramentas gráficas como DBeaver ou pgAdmin
 
-Configuração no DBeaver:
+## Configuração no DBeaver:
 
 Host: localhost
 
@@ -134,13 +132,13 @@ Username: postgres
 
 Password: 1234
 
-Exemplos de consultas SQL úteis
+## Exemplos de consultas SQL úteis
 Listar todos os chamados:
 
 ```
 SELECT * FROM chamados ORDER BY id;
-Listar apenas chamados abertos:
 ```
+Listar apenas chamados abertos:
 
 ```
 SELECT * FROM chamados WHERE estar_aberto = true ORDER BY id;
@@ -160,10 +158,10 @@ Limpar a tabela e resetar os IDs:
 ```
 TRUNCATE TABLE chamados RESTART IDENTITY;
 ```
-Observações
+## Observações
 Este projeto foi desenvolvido com foco em aprendizado. A migração de ambiente Windows para Linux e o uso de Docker fizeram parte do processo de evolução técnica.
 
-Próximos passos
+## Próximos passos
 Criar uma Web API para expor os chamados via HTTP
 
 Adicionar validações de regras de negócio
