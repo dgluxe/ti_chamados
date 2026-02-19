@@ -32,8 +32,9 @@ dotnet --info
 ```
 Verificar se o Docker está instalado:
 
-```Bash
+```
 docker --version
+```
 Testar se o Docker está funcionando:
 
 Bash
