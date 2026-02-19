@@ -1,6 +1,7 @@
 ﻿using OComeço;
 
-GerenciadorChamados gerenciador = new();
+ChamadoRepository repo = new();
+
 while (true)
 {
 
@@ -23,15 +24,21 @@ while (true)
         Console.WriteLine("Digite a descrição");
         string? descricao = Console.ReadLine();
 
-        gerenciador.Criar(titulo, descricao);
+        repo.Criar(titulo!, descricao!);
+        Console.WriteLine("Chamado criado no banco com sucesso");
     }
     else if (resposta == 2)
     {
-        gerenciador.Listar();
+        repo.Listar();
     }
     else if (resposta == 3)
     {
-        gerenciador.Fechar();
+        Console.WriteLine("Digite o ID do chamado que deseja fechar:");
+        int id = Convert.ToInt32(Console.ReadLine());
+        repo.Fechar(id);
+
+        System.Console.WriteLine("Chamado fechado");
+
     }
     else
     {
