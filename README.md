@@ -28,7 +28,8 @@ Os dados são persistidos no PostgreSQL, ou seja, permanecem salvos mesmo após 
 Verificar se o .NET está instalado:
 
 ```Bash
-dotnet --info ```
+dotnet --info
+
 Verificar se o Docker está instalado:
 
 ```Bash
